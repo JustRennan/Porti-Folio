@@ -1,183 +1,108 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Equipe Aurora — Portfólio com integrantes, skills, projetos e contato." />
-  <title>Equipe Aurora — Portfólio</title>
-  <link rel="icon" href="assets/icons/favicon.png" />
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipe Alpha - Portfólio</title>
+  <meta name="description" content="Landing Page da equipe - Portfólio com integrantes, skills, projetos e contato.">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="header" id="topo">
-    <nav class="nav container" aria-label="Navegação principal">
-      <a class="nav__brand" href="#hero" aria-label="Ir para o início">Equipe Aurora</a>
-      <button id="menu-btn" class="nav__toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">☰</button>
-      <ul id="menu" class="nav__menu">
-        <li><a class="nav__link" href="#hero">Início</a></li>
-        <li><a class="nav__link" href="#sobre">Equipe</a></li>
-        <li><a class="nav__link" href="#skills">Skills</a></li>
-        <li><a class="nav__link" href="#projetos">Projetos</a></li>
-        <li><a class="nav__link" href="#contato">Contato</a></li>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Equipe Alpha</div>
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section id="hero" class="hero" aria-labelledby="hero-title">
-      <div class="container hero__content">
-        <h1 id="hero-title" class="hero__title">Equipe Aurora</h1>
-        <p class="hero__subtitle">Criando experiências digitais com código, design e café.</p>
-        <a href="#projetos" class="btn btn--cta">Ver Projetos</a>
+  <!-- Hero -->
+  <section id="hero">
+    <h1>Equipe Alpha</h1>
+    <p>Transformando ideias em código</p>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre">
+    <h2>Sobre a Equipe</h2>
+    <div class="integrantes">
+      <div class="card">
+        <img src="img/pablo.jpg" alt="Foto de Pablo Rennan">
+        <h3>Pablo Rennan</h3>
+        <p>Desenvolvedor Full Stack</p>
       </div>
-    </section>
-
-    <!-- SOBRE -->
-    <section id="sobre" class="section" aria-labelledby="sobre-title">
-      <div class="container">
-        <h2 id="sobre-title" class="section__title">Sobre a Equipe</h2>
-        <p class="section__lead">Somos 3 integrantes apaixonados por tecnologia. Front, Back e UI se encontram aqui.</p>
-
-        <ul class="team">
-          <li class="team__card">
-            <img class="team__photo" src="assets/img/membro1.jpg" alt="Foto do integrante João — Frontend" />
-            <h3 class="team__name">Pablo Rennan</h3>
-            <p class="team__role">Frontend</p>
-            <p class="team__bio">HTML, CSS, JS e acessibilidade.</p>
-          </li>
-          <li class="team__card">
-            <img class="team__photo" src="assets/img/membro2.jpg" alt="Foto da integrante Maria — Backend" />
-            <h3 class="team__name">Haziel</h3>
-            <p class="team__role">Backend</p>
-            <p class="team__bio">APIs, Node e banco de dados.</p>
-          </li>
-          <li class="team__card">
-            <img class="team__photo" src="assets/img/membro3.jpg" alt="Foto da integrante Ana — UI/UX" />
-            <h3 class="team__name">Kaik</h3>
-            <p class="team__role">UI/UX</p>
-            <p class="team__bio">Design de interfaces e pesquisa.</p>
-          </li>
-        </ul>
+      <div class="card">
+        <img src="img/haziel.jpg" alt="Foto de Haziel">
+        <h3>Haziel</h3>
+        <p>Designer & Front-end</p>
       </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="section" aria-labelledby="skills-title">
-      <div class="container">
-        <h2 id="skills-title" class="section__title">Skills & Stacks</h2>
-        <ul class="skills">
-          <li class="skills__item"><img src="assets/icons/html5.svg" alt="HTML5">HTML5</li>
-          <li class="skills__item"><img src="assets/icons/css3.svg" alt="CSS3">CSS3</li>
-          <li class="skills__item"><img src="assets/icons/js.svg" alt="JavaScript">JavaScript</li>
-          <li class="skills__item"><img src="assets/icons/node.svg" alt="Node.js">Node.js</li>
-          <li class="skills__item"><img src="assets/icons/figma.svg" alt="Figma">Figma</li>
-        </ul>
+      <div class="card">
+        <img src="img/kaik.jpg" alt="Foto de Kaik">
+        <h3>Kaik</h3>
+        <p>Back-end & Banco de Dados</p>
       </div>
-    </section>
-
-    <!-- PROJETOS -->
-    <section id="projetos" class="section" aria-labelledby="projetos-title">
-      <div class="container">
-        <h2 id="projetos-title" class="section__title">Projetos</h2>
-
-        <div class="grid projects">
-          <article class="card projects__card">
-            <img class="card__img" src="assets/img/proj1.jpg" alt="Imagem de capa do Projeto 1" />
-            <div class="card__body">
-              <h3 class="card__title">Projeto 1 — Landing Shop</h3>
-              <p class="card__text">Página de produto responsiva com animações leves.</p>
-              <div class="card__actions">
-                <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">Ver repositório</a>
-                <button class="btn btn--small btn--modal" data-modal="modal-proj1">Detalhes</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="card projects__card">
-            <img class="card__img" src="assets/img/proj2.jpg" alt="Imagem de capa do Projeto 2" />
-            <div class="card__body">
-              <h3 class="card__title">Projeto 2 — API Node</h3>
-              <p class="card__text">API REST com autenticação e CRUD completo.</p>
-              <div class="card__actions">
-                <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">Ver repositório</a>
-                <button class="btn btn--small btn--modal" data-modal="modal-proj2">Detalhes</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="card projects__card">
-            <img class="card__img" src="assets/img/proj3.jpg" alt="Imagem de capa do Projeto 3" />
-            <div class="card__body">
-              <h3 class="card__title">Projeto 3 — UI Kit</h3>
-              <p class="card__text">Biblioteca de componentes acessíveis.</p>
-              <div class="card__actions">
-                <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">Ver repositório</a>
-                <button class="btn btn--small btn--modal" data-modal="modal-proj3">Detalhes</button>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTATO -->
-    <section id="contato" class="section" aria-labelledby="contato-title">
-      <div class="container">
-        <h2 id="contato-title" class="section__title">Contato</h2>
-        <form id="form-contato" class="form" novalidate>
-          <div class="form__group">
-            <label for="nome">Nome</label>
-            <input id="nome" name="nome" type="text" placeholder="Seu nome" required />
-            <small class="form__error" aria-live="polite"></small>
-          </div>
-          <div class="form__group">
-            <label for="email">E-mail</label>
-            <input id="email" name="email" type="email" placeholder="seu@email.com" required />
-            <small class="form__error" aria-live="polite"></small>
-          </div>
-          <div class="form__group">
-            <label for="mensagem">Mensagem</label>
-            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Como podemos ajudar?" required></textarea>
-            <small class="form__error" aria-live="polite"></small>
-          </div>
-          <button class="btn" type="submit">Enviar mensagem</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer__content">
-      <p>&copy; <span id="ano"></span> Equipe Aurora. Todos os direitos reservados.</p>
-      <a href="#topo" id="voltar-topo" class="to-top" aria-label="Voltar ao topo">↑</a>
     </div>
-  </footer>
+  </section>
 
-  <!-- Modais de Projetos -->
-  <div id="modal-proj1" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal1-title">
-    <div class="modal__dialog">
-      <button class="modal__close" aria-label="Fechar modal">×</button>
-      <h3 id="modal1-title">Projeto 1 — Landing Shop</h3>
-      <p>Detalhes do projeto, desafios e tecnologias usadas.</p>
-    </div>
-  </div>
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills & Stacks</h2>
+    <ul class="skills-list">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>Java</li>
+      <li>SQL</li>
+      <li>Git & GitHub</li>
+    </ul>
+  </section>
 
-  <div id="modal-proj2" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal2-title">
-    <div class="modal__dialog">
-      <button class="modal__close" aria-label="Fechar modal">×</button>
-      <h3 id="modal2-title">Projeto 2 — API Node</h3>
-      <p>Endpoints, autenticação e cobertura de testes.</p>
+  <!-- Projetos -->
+  <section id="projetos">
+    <h2>Projetos</h2>
+    <div class="projetos-container">
+      <div class="projeto-card">
+        <h3>Lancho-Nete</h3>
+        <p>Aplicação para gerenciamento de pedidos em uma lanchonete.</p>
+        <a href="https://github.com/JustRennan/Lancho-Nete" target="_blank">Ver projeto</a>
+        <button class="abrir-modal">Detalhes</button>
+      </div>
+      <div class="projeto-card">
+        <h3>Projeto de Haziel</h3>
+        <p>Landing Page criativa com foco em design responsivo.</p>
+        <a href="#">Ver projeto</a>
+        <button class="abrir-modal">Detalhes</button>
+      </div>
+      <div class="projeto-card">
+        <h3>Projeto de Kaik</h3>
+        <p>Sistema simples com banco de dados para cadastro de usuários.</p>
+        <a href="#">Ver projeto</a>
+        <button class="abrir-modal">Detalhes</button>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div id="modal-proj3" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal3-title">
-    <div class="modal__dialog">
-      <button class="modal__close" aria-label="Fechar modal">×</button>
-      <h3 id="modal3-title">Projeto 3 — UI Kit</h3>
-      <p>Componentes acessíveis, tokens de design e documentação.</p>
-    </div>
-  </div>
+  <!-- Contato -->
+  <section id="contato">
+    <h2>Contato</h2>
+    <form id="form-contato">
+      <input type="text" id="nome" placeholder="Seu nome">
+      <input type="email" id="email" placeholder="Seu email">
+      <textarea id="mensagem" placeholder="Sua mensagem"></textarea>
+      <button type="submit">Enviar</button>
+      <p id="msg-feedback"></p>
+    </form>
+  </section>
+
+  <!-- Botão voltar ao topo -->
+  <button id="btn-topo">↑</button>
 
   <script src="js/script.js"></script>
 </body>
