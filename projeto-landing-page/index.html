@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Equipe Alpha - Portfólio</title>
-  <meta name="description" content="Landing Page da equipe - Portfólio com integrantes, skills, projetos e contato.">
+  <meta name="description" content="Landing Page da Equipe - Portfólio">
+  <title>Equipe DevStars - Portfólio</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
   <!-- Navbar -->
   <header>
     <nav class="navbar">
-      <div class="logo">Equipe Alpha</div>
-      <button class="menu-toggle" id="menu-toggle">☰</button>
+      <h1 class="logo">Equipe DevStars</h1>
+      <button class="hamburger" id="hamburger">&#9776;</button>
       <ul class="nav-links" id="nav-links">
         <li><a href="#hero">Início</a></li>
-        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#sobre">Equipe</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projetos">Projetos</a></li>
         <li><a href="#contato">Contato</a></li>
@@ -25,66 +26,65 @@
 
   <!-- Hero -->
   <section id="hero">
-    <h1>Equipe Alpha</h1>
-    <p>Transformando ideias em código</p>
+    <div class="hero-content">
+      <h2>Bem-vindo à Equipe DevStars</h2>
+      <p>"Transformando ideias em soluções digitais"</p>
+    </div>
   </section>
 
-  <!-- Sobre -->
+  <!-- Sobre a Equipe -->
   <section id="sobre">
     <h2>Sobre a Equipe</h2>
-    <div class="integrantes">
-      <div class="card">
+    <div class="membros">
+      <div class="membro">
         <img src="img/pablo.jpg" alt="Foto de Pablo Rennan">
         <h3>Pablo Rennan</h3>
-        <p>Desenvolvedor Full Stack</p>
+        <p>Desenvolvedor Fullstack</p>
       </div>
-      <div class="card">
+      <div class="membro">
         <img src="img/haziel.jpg" alt="Foto de Haziel">
         <h3>Haziel</h3>
-        <p>Designer & Front-end</p>
+        <p>UI/UX Designer</p>
       </div>
-      <div class="card">
+      <div class="membro">
         <img src="img/kaik.jpg" alt="Foto de Kaik">
         <h3>Kaik</h3>
-        <p>Back-end & Banco de Dados</p>
+        <p>Desenvolvedor Backend</p>
       </div>
     </div>
   </section>
 
   <!-- Skills -->
   <section id="skills">
-    <h2>Skills & Stacks</h2>
+    <h2>Nossas Skills</h2>
     <ul class="skills-list">
       <li>HTML5</li>
       <li>CSS3</li>
       <li>JavaScript</li>
       <li>Java</li>
-      <li>SQL</li>
-      <li>Git & GitHub</li>
+      <li>Python</li>
+      <li>Banco de Dados</li>
     </ul>
   </section>
 
   <!-- Projetos -->
   <section id="projetos">
     <h2>Projetos</h2>
-    <div class="projetos-container">
+    <div class="projetos-grid">
       <div class="projeto-card">
-        <h3>Lancho-Nete</h3>
-        <p>Aplicação para gerenciamento de pedidos em uma lanchonete.</p>
-        <a href="https://github.com/JustRennan/Lancho-Nete" target="_blank">Ver projeto</a>
-        <button class="abrir-modal">Detalhes</button>
+        <h3>Lancho Nete</h3>
+        <p>Projeto desenvolvido por Pablo Rennan.</p>
+        <a href="https://github.com/JustRennan/Lancho-Nete" target="_blank" class="btn">Ver Projeto</a>
       </div>
       <div class="projeto-card">
-        <h3>Projeto de Haziel</h3>
-        <p>Landing Page criativa com foco em design responsivo.</p>
-        <a href="#">Ver projeto</a>
-        <button class="abrir-modal">Detalhes</button>
+        <h3>Design App</h3>
+        <p>Protótipo criado por Haziel focado em UX/UI.</p>
+        <a href="#" class="btn">Ver Projeto</a>
       </div>
       <div class="projeto-card">
-        <h3>Projeto de Kaik</h3>
-        <p>Sistema simples com banco de dados para cadastro de usuários.</p>
-        <a href="#">Ver projeto</a>
-        <button class="abrir-modal">Detalhes</button>
+        <h3>API de Reservas</h3>
+        <p>Sistema backend criado por Kaik.</p>
+        <a href="#" class="btn">Ver Projeto</a>
       </div>
     </div>
   </section>
@@ -92,17 +92,17 @@
   <!-- Contato -->
   <section id="contato">
     <h2>Contato</h2>
-    <form id="form-contato">
+    <form id="contato-form">
       <input type="text" id="nome" placeholder="Seu nome">
-      <input type="email" id="email" placeholder="Seu email">
+      <input type="email" id="email" placeholder="Seu e-mail">
       <textarea id="mensagem" placeholder="Sua mensagem"></textarea>
       <button type="submit">Enviar</button>
-      <p id="msg-feedback"></p>
     </form>
+    <p id="form-msg"></p>
   </section>
 
-  <!-- Botão voltar ao topo -->
-  <button id="btn-topo">↑</button>
+  <!-- Voltar ao topo -->
+  <button id="topBtn">↑</button>
 
   <script src="js/script.js"></script>
 </body>
