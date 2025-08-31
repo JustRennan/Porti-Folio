@@ -1,139 +1,125 @@
-/* ===== Paleta ===== */
-:root{
-  --roxo:#470D57;  /* header/brand */
-  --bege:#FCF1DD;  /* fundo suave */
-  --amarelo:#FFD379; /* hover/destaques */
-  --laranja:#fc8d32; /* CTA/botões */
-  --branco:#FFFFFF;
-  --cinza:#333;
-  --shadow:0 10px 24px rgba(0,0,0,.12);
-  --radius:14px;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* ===== Base ===== */
-*{box-sizing:border-box}
-html,body{margin:0}
-body{
-  font: 16px/1.6 "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color:var(--cinza);
-  background:var(--bege);
-}
-img{max-width:100%; display:block}
-
-.container{width:min(1120px, 92%); margin-inline:auto}
-
-/* ===== Header/Nav ===== */
-.header{
-  position:sticky; top:0; z-index:1000;
-  background:var(--roxo); color:var(--branco);
-  box-shadow: var(--shadow);
-}
-.nav{display:flex; align-items:center; justify-content:space-between; padding:.9rem 0}
-.nav__brand{color:var(--branco); text-decoration:none; font-weight:800; letter-spacing:.4px}
-.nav__toggle{
-  background:none; border:none; color:var(--branco); font-size:1.6rem; cursor:pointer
-}
-.nav__menu{
-  list-style:none; margin:0; padding:0;
-  position:absolute; right:4%; top:64px;
-  background:var(--roxo); border-radius:12px; display:none; flex-direction:column; gap:.5rem; padding:1rem 1.2rem;
-}
-.nav__link{color:var(--branco); text-decoration:none; font-weight:600}
-.nav__link:hover{color:var(--amarelo)}
-
-@media(min-width: 840px){
-  .nav__toggle{display:none}
-  .nav__menu{position:static; display:flex; flex-direction:row; gap:1.25rem; background:transparent; padding:0}
+/* Geral */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f8fbff;
+  color: #1a1a1a;
 }
 
-/* ===== Hero ===== */
-.hero{
-  background:
-    linear-gradient( to bottom, rgba(71,13,87,.75), rgba(71,13,87,.45) ),
-    url("../assets/img/banner.jpg") center/cover no-repeat;
-  color:var(--branco);
-  padding: 7rem 0 4rem;
-  text-align:center;
+h1, h2, h3 {
+  color: #003366;
 }
-.hero__title{font-size: clamp(2rem, 5vw, 3rem); margin:0 0 .4rem}
-.hero__subtitle{opacity:.95; margin:0 0 1.2rem}
-.btn{
-  display:inline-block; border:none; cursor:pointer; text-decoration:none;
-  background:var(--laranja); color:var(--branco); font-weight:700;
-  padding:.9rem 1.2rem; border-radius:12px; box-shadow: var(--shadow); transition: transform .12s ease, background .2s ease;
-}
-.btn:hover{transform: translateY(-2px); background:var(--amarelo); color:var(--roxo)}
-.btn--cta{font-size:1rem}
-.btn--ghost{background:transparent; border:2px solid var(--laranja); color:var(--laranja)}
-.btn--ghost:hover{background:var(--laranja); color:var(--branco)}
-.btn--small{padding:.55rem .8rem; font-size:.9rem}
 
-/* ===== Seções ===== */
-.section{padding: 3.5rem 0}
-.section__title{
-  color:var(--roxo); text-align:center; margin:0 0 1.25rem;
-  font-size: clamp(1.5rem, 3.5vw, 2rem)
+section {
+  padding: 40px 20px;
+  text-align: center;
 }
-.section__lead{max-width:60ch; margin:0 auto 2rem; text-align:center}
 
-/* ===== Equipe ===== */
-.team{display:grid; grid-template-columns:1fr; gap:1rem; list-style:none; padding:0; margin:0}
-.team__card{
-  background:var(--branco); border-radius:var(--radius); box-shadow:var(--shadow); padding:1rem; text-align:center
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #003366, #3399ff);
+  color: white;
+  padding: 80px 20px;
 }
-.team__photo{width:120px; height:120px; border-radius:50%; object-fit:cover; margin: .25rem auto 1rem}
-.team__name{margin:.5rem 0 0; color:var(--roxo)}
-.team__role{margin:.1rem 0 .6rem; font-weight:700; color:#6b3b77}
-.team__bio{margin:0}
 
-@media(min-width:768px){ .team{grid-template-columns:repeat(3,1fr)} }
-
-/* ===== Skills ===== */
-.skills{
-  display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:.8rem;
-  list-style:none; padding:0; margin:0 auto; max-width:720px
+/* Equipe */
+.team {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
-.skills__item{
-  display:flex; align-items:center; gap:.6rem; background:var(--branco);
-  border-radius:10px; padding:.7rem .9rem; box-shadow:var(--shadow)
-}
-.skills__item img{width:24px; height:24px}
 
-/* ===== Projetos ===== */
-.grid{display:grid; gap:1rem}
-.projects{grid-template-columns:1fr}
-@media(min-width:820px){ .projects{grid-template-columns:repeat(3,1fr)} }
-
-.card{background:var(--branco); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden}
-.card__img{height:160px; width:100%; object-fit:cover}
-.card__body{padding:1rem}
-.card__title{margin:.2rem 0 .5rem; color:var(--roxo)}
-.card__text{margin:0 0 1rem}
-.card__actions{display:flex; gap:.6rem; flex-wrap:wrap}
-
-/* ===== Form ===== */
-.form{max-width:680px; margin:0 auto}
-.form__group{display:flex; flex-direction:column; gap:.35rem; margin-bottom:1rem}
-.form input, .form textarea{
-  padding:.85rem; border-radius:10px; border:1px solid #ddd; background:#fff; outline-color: var(--laranja)
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 220px;
 }
-.form__error{color:#a01; min-height:1.2em; font-size:.9rem}
 
-/* ===== Footer & Top ===== */
-.footer{background:var(--roxo); color:var(--branco); padding:1.5rem 0; margin-top:2rem}
-.footer__content{display:flex; align-items:center; justify-content:space-between; gap:1rem}
-.to-top{
-  background:var(--laranja); color:var(--branco); width:40px; height:40px; display:grid; place-items:center;
-  border-radius:50%; text-decoration:none; box-shadow:var(--shadow); transform: translateY(0); transition: transform .12s ease
+.card img {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
-.to-top:hover{transform: translateY(-2px)}
 
-/* ===== Modal ===== */
-.modal{
-  position:fixed; inset:0; display:none; place-items:center; background:rgba(0,0,0,.55); padding:1rem
+/* Skills */
+.skills ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
 }
-.modal--open{display:grid}
-.modal__dialog{
-  width:min(560px, 92%); background:var(--branco); border-radius:var(--radius); box-shadow:var(--shadow); padding:1.2rem
+
+.skills li {
+  background: #3399ff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
 }
-.modal__close{background:transparent; border:none; font-size:1.5rem; float:right; cursor:pointer}
+
+/* Projetos */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #003366;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Contato */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+  gap: 10px;
+}
+
+.contact input, .contact textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.contact button {
+  background: #003366;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background: #3399ff;
+}
+
+/* Rodapé */
+footer {
+  background: #003366;
+  color: white;
+  text-align: c
+}
